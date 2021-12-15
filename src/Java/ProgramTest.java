@@ -35,4 +35,22 @@ public class ProgramTest {
         assertNotNull(thrown.getMessage());
     }
 
+    @Test
+    public void testFileEmpty() {
+        String filePath = "C:\\Users\\DNS\\Desktop\\foreign_names1.csv";
+        Throwable thrown = assertThrows(Exception.class, () -> {
+            ReaderCSV.ReaderToCSV(filePath);
+        });
+        assertNotNull(thrown.getMessage());
+    }
+
+    @Test
+    public void testFileData() {
+        String filePath = "C:\\Users\\DNS\\Desktop\\BPMN.docx";
+        Throwable thrown = assertThrows(Exception.class, () -> {
+            ReaderCSV.ReaderToCSV(filePath);
+        });
+        assertNotNull(thrown.getMessage());
+    }
+
 }

@@ -78,7 +78,7 @@ public class Human {
     }
     /**
      * Переопределение метода toString() для класса Human
-     * @return строку с данными о человеке
+     * @return строка с данными о человеке
      */
     @Override
     public String toString(){

@@ -32,7 +32,7 @@ public class Division {
     }
     /**
      * Переопределение метода toString() для класса Division
-     * @return строку с названием подразделения и его ID
+     * @return строка с названием подразделения и его ID
      */
     @Override
     public String toString(){
