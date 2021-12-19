@@ -39,7 +39,7 @@ public class ReaderCSV {
 
                 HumanList.add(human);
             } catch (Exception exp){
-                throw new Exception("Файл не формата CSV или данные некорректны'!");
+                throw new Exception("Файл не формата CSV или данные некорректны!");
             }
         }
         reader.close();

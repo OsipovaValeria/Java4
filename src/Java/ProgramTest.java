@@ -2,6 +2,7 @@ package Java;
 
 import org.junit.Assert;
 import org.junit.Test;
+import org.junit.jupiter.api.Assertions;
 
 import java.io.IOException;
 
@@ -29,28 +30,28 @@ public class ProgramTest {
     @Test
     public void testPathFile() {
         String filePath = "C:\\Users\\DNS\\Desktop\\foreign.csv";
-        Throwable thrown = assertThrows(IOException.class, () -> {
+        IOException exception = assertThrows(IOException.class, () -> {
             ReaderCSV.ReaderToCSV(filePath);
         });
-        assertNotNull(thrown.getMessage());
+        Assertions.assertEquals("C:\\Users\\DNS\\Desktop\\foreign.csv (Не удается найти указанный файл)", exception.getMessage());
     }
 
     @Test
     public void testFileEmpty() {
         String filePath = "C:\\Users\\DNS\\Desktop\\foreign_names1.csv";
-        Throwable thrown = assertThrows(Exception.class, () -> {
+        Exception exception = assertThrows(Exception.class, () -> {
             ReaderCSV.ReaderToCSV(filePath);
         });
-        assertNotNull(thrown.getMessage());
+        Assertions.assertEquals("Файл пуст!", exception.getMessage());
     }
 
     @Test
     public void testFileData() {
         String filePath = "C:\\Users\\DNS\\Desktop\\BPMN.docx";
-        Throwable thrown = assertThrows(Exception.class, () -> {
+        Exception exception = assertThrows(Exception.class, () -> {
             ReaderCSV.ReaderToCSV(filePath);
         });
-        assertNotNull(thrown.getMessage());
+        Assertions.assertEquals("Файл не формата CSV или данные некорректны!", exception.getMessage());
     }
 
 }
