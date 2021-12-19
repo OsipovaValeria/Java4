@@ -3,7 +3,7 @@ package Java;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
-import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
 import java.util.Scanner;
 
@@ -23,7 +23,7 @@ public class ReaderCSV {
         // считываем построчно
         String line;
         Scanner scanner;
-        List<Human> HumanList = new ArrayList<>();
+        List<Human> HumanList = new LinkedList<>();
         line = reader.readLine();
         while ((line = reader.readLine()) != null) {
             scanner = new Scanner(line);
