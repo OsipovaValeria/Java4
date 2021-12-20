@@ -47,11 +47,11 @@ public class ProgramTest {
 
     @Test
     public void testFileData() {
-        String filePath = "C:\\Users\\DNS\\Desktop\\BPMN.docx";
+        String filePath = "C:\\Users\\DNS\\Desktop\\foreign_names2.csv";
         Exception exception = assertThrows(Exception.class, () -> {
             ReaderCSV.ReaderToCSV(filePath);
         });
-        Assertions.assertEquals("Файл не формата CSV или данные некорректны!", exception.getMessage());
+        Assertions.assertEquals("Данные некорректны!", exception.getMessage());
     }
 
 }

@@ -32,14 +32,15 @@ public class ReaderCSV {
                 int id = scanner.nextInt();
                 String name = scanner.next();
                 String gender = scanner.next();
+                if (!gender.equals("Male") && !gender.equals("Female")) {throw new Exception("Данные некорректны!");}
                 String birthDate = scanner.next();
                 Division division = new Division(scanner.next());
                 int salary = scanner.nextInt();
+                if (salary < 0) {throw new Exception("Данные некорректны!");}
                 Human human = new Human(id, name, gender, birthDate, division, salary);
-
                 HumanList.add(human);
             } catch (Exception exp){
-                throw new Exception("Файл не формата CSV или данные некорректны!");
+                throw new Exception("Данные некорректны!");
             }
         }
         reader.close();

@@ -11,7 +11,7 @@ public class Main {
     public static void main(String[] args) {
         String exit = "";
         do {
-            System.out.println("Введите путь к файлу в формате - C:\\...\\file.csv");
+            System.out.println("Введите путь к файлу в формате - C:\\...\\file_name.csv");
             Scanner console1 = new Scanner(System.in);
             String filePath = console1.nextLine();
             //String filePath = "C:\\Users\\DNS\\Desktop\\foreign_names.csv";
